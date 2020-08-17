@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="conversion-service.xml" />
+	
+	<!-- Spamlists -->
+	
+	<bean id="spamlist1" class="acme.entities.spamlist.Spamlist">
+		<property name="spamwordslist">
+			<list>
+				<ref bean="string1"/>
+				<ref bean="string2"/>
+				<ref bean="string3"/>
+				<ref bean="string4"/>
+				<ref bean="string5"/>
+				<ref bean="string6"/>
+				<ref bean="string7"/>
+			</list>
+		</property>
+		<property name="threshold" value="2.5"></property>
+	</bean>
+	<!-- Spamwords -->
+	
+	<bean id="string1" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="sex"/>
+		<property name="spanishSpamword" value="sexo"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string2" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="hard core"/>
+		<property name="spanishSpamword" value="explicito"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string3" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="viagra"/>
+		<property name="spanishSpamword" value="viagra"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string4" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="cialis"/>
+		<property name="spanishSpamword" value="cialis"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string5" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="nigeria"/>
+		<property name="spanishSpamword" value="nigeria"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string6" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="you've won"/>
+		<property name="spanishSpamword" value="has ganado"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string7" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="million dollar"/>
+		<property name="spanishSpamword" value="millón de dolares"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<!-- Hernandez Bulletins -->
+	<bean id="hernandezbulletin1" class="acme.entities.bulletins.HernandezBulletin">
+		<property name="name" value="Iván"></property>
+		<property name="surname" value="Hernández"></property>
+		<property name="country" value="España"></property>
+		<property name="favouriteSinger" value="Eminem"></property>
+	</bean>
+	
+	<bean id="hernandezbulletin2" class="acme.entities.bulletins.HernandezBulletin">
+		<property name="name" value="Pedro"></property>
+		<property name="surname" value="Algeciras"></property>
+		<property name="country" value="Alemania"></property>
+		<property name="favouriteSinger" value="Harry Styles"></property>
+	</bean>
+	
+	<!-- Sectors -->
+	
+	<bean id="sector1" class="acme.entities.sectors.Sector">
+		<property name="name" value="Technology"></property>
+	</bean>
+	
+	<bean id="sector2" class="acme.entities.sectors.Sector">
+		<property name="name" value="Science"></property>
+	</bean>
+	
+	<bean id="sector3" class="acme.entities.sectors.Sector">
+		<property name="name" value="Arts"></property>
+	</bean>
+	
+	<bean id="sector4" class="acme.entities.sectors.Sector">
+		<property name="name" value="Business"></property>
+	</bean>
+	
+	<bean id="sector5" class="acme.entities.sectors.Sector">
+		<property name="name" value="Health"></property>
+	</bean>
+	
+	<!-- Notices -->
+	
+	<bean id="notice1" class="acme.entities.notices.Notice">
+		<property name="headerPicture" value="https://www.pinterest.es/pin/569705421612656450/"></property>
+		<property name="title" value="La US avanza las investigaciones."></property>
+		<property name="creationDate" value="2020/07/10 12:30"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="body" value="Se han avanzado las diferentes investigaciones llevadas a cabo en las diferentes universidades"></property>
+		<property name="relatedNotices">
+			<list>
+				<value>https://www.abc.es/sociedad/abci-alemania-declara-toda-espana-como-zona-riesgo-excepcion-canarias-202008141816_noticia.html?ref=https:%2F%2Fwww.google.com%2F</value>
+				<value>https://www.20minutos.es/noticia/4352934/0/hospitalizados-meningoencefalitis-mosquito-sevilla/</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="notice2" class="acme.entities.notices.Notice">
+		<property name="headerPicture" value="https://www.pinterest.es/pin/735071970423482551/"></property>
+		<property name="title" value="Una solución al COVID19"></property>
+		<property name="creationDate" value="2020/07/01 12:00"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="body" value="La solución al COVID19 está más cerca de todos nosotros gracias a un buen Ruso apodado 'Cyka Blyat'"></property>
+		<property name="relatedNotices">
+			<list>
+				<value>https://www.20minutos.es/noticia/4352934/0/hospitalizados-meningoencefalitis-mosquito-sevilla/</value>
+				<value>https://www.20minutos.es/noticia/4352782/0/hospital-vall-d-hebron-crea-registro-internacional-tratar-pacientes-covid-y-otras-patologias/</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="notice3" class="acme.entities.notices.Notice">
+		<property name="headerPicture" value="https://www.pinterest.es/pin/826480969101400248/"></property>
+		<property name="title" value="Médicos se empadronan en Haití"></property>
+		<property name="creationDate" value="2020/07/08 12:00"></property>
+		<property name="deadline" value="2020/08/13 00:00"></property>
+		<property name="body" value="Los buenos médicos se van para Haití. Que buenos son"></property>
+		<property name="relatedNotices">
+			<list>
+				<value>https://www.20minutos.es/noticia/4352920/0/menores-detenidos-robo-muerte-hospitalet/</value>
+				<value>https://www.20minutos.es/noticia/4352934/0/hospitalizados-meningoencefalitis-mosquito-sevilla/</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Technology records -->
+	
+	<bean id="technologyRecord1" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Record #1"></property>
+		<property name="sector" ref="sector1"></property>
+		<property name="inventor" value="Isaac Newton"></property>
+		<property name="description" value="Such a nice technology to make a record."></property>
+		<property name="web" value="https://www.google.es"></property>
+		<property name="email" value="isaacnewton@gmail.com"></property>
+		<property name="openSource" value="True"></property>
+		<property name="stars" value="5"></property>
+	</bean>
+	
+	<bean id="technologyRecord2" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Record #2"></property>
+		<property name="sector" ref="sector1"></property>
+		<property name="inventor" value="José Benítez"></property>
+		<property name="description" value="Such a nice technology to make a record. #22"></property>
+		<property name="web" value="https://www.marca.com"></property>
+		<property name="email" value="josebenitez@gmail.com"></property>
+		<property name="openSource" value="False"></property>
+		<property name="stars" value="3"></property>
+	</bean>
+	
+	<bean id="technologyRecord3" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Record #3"></property>
+		<property name="sector" ref="sector2"></property>
+		<property name="inventor" value="Pepe Nerión"></property>
+		<property name="description" value="Such a nice technology to make a record. #33"></property>
+		<property name="web" value="https://www.as.com"></property>
+		<property name="email" value="pepe@gmail.com"></property>
+		<property name="openSource" value="False"></property>
+		<property name="stars" value="1"></property>
+	</bean>
+	
+	<bean id="technologyRecord4" class="acme.entities.technologyRecords.TechnologyRecord">
+		<property name="title" value="Record #4"></property>
+		<property name="sector" ref="sector4"></property>
+		<property name="inventor" value="Lolo Tomeno"></property>
+		<property name="description" value="Such a nice technology to make a record. #44"></property>
+		<property name="web" value="https://www.news.com"></property>
+		<property name="email" value="lolo@gmail.com"></property>
+		<property name="openSource" value="True"></property>
+		<property name="stars" value="2"></property>
+	</bean>
+	
+	<!-- Tool records -->
+
+	<bean id="toolRecord1" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Record #1"></property>
+		<property name="sector" ref="sector3"></property>
+		<property name="inventor" value="John Testing"></property>
+		<property name="description" value="This is a really good tool to use it on your own."></property>
+		<property name="web" value="https://www.dp.com"></property>
+		<property name="email" value="john@gmail.com"></property>
+		<property name="openSource" value="True"></property>
+		<property name="stars" value="5"></property>
+	</bean>
+	
+	<bean id="toolRecord2" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Record #2"></property>
+		<property name="sector" ref="sector3"></property>
+		<property name="inventor" value="Eva Moreno"></property>
+		<property name="description" value="This is a really good tool to use it on your own. #22"></property>
+		<property name="web" value="https://www.tuweb.com"></property>
+		<property name="email" value="evamoreno@gmail.com"></property>
+		<property name="openSource" value="True"></property>
+		<property name="stars" value="4"></property>
+	</bean>
+	
+	<bean id="toolRecord3" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Record #3"></property>
+		<property name="sector" ref="sector5"></property>
+		<property name="inventor" value="María del Mar"></property>
+		<property name="description" value="This is a really good tool to use it on your own. #33"></property>
+		<property name="web" value="https://www.sea.com"></property>
+		<property name="email" value="maria@gmail.com"></property>
+		<property name="openSource" value="False"></property>
+		<property name="stars" value="5"></property>
+	</bean>
+	
+	<bean id="toolRecord4" class="acme.entities.toolRecords.ToolRecord">
+		<property name="title" value="Record #4"></property>
+		<property name="sector" ref="sector4"></property>
+		<property name="inventor" value="Unknown inventor"></property>
+		<property name="description" value="This is a really good tool to use it on your own. #44"></property>
+		<property name="web" value="https://www.knowme.com"></property>
+		<property name="email" value="joseluis@gmail.com"></property>
+		<property name="openSource" value="False"></property>
+		<property name="stars" value="3"></property>
+	</bean>
+	
+	<!-- Overtures -->
+	
+	<bean id="overture1" class="acme.entities.overtures.Overture">
+		<property name="title" value="Overture #1"></property>
+		<property name="creationDate" value="2020/08/01 00:00"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="paragraph" value="Any overture for the #1?"></property>
+		<property name="minimumMoney" value="10 €"></property>
+		<property name="maximumMoney" value="25 €"></property>
+		<property name="email" value="trial@gmail.com"></property>
+	</bean>
+	
+	<bean id="overture2" class="acme.entities.overtures.Overture">
+		<property name="title" value="Overture #2"></property>
+		<property name="creationDate" value="2020/07/01 00:00"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="paragraph" value="Any overture for the #1?"></property>
+		<property name="minimumMoney" value="50 €"></property>
+		<property name="maximumMoney" value="100 €"></property>
+		<property name="email" value="email@outlook.com"></property>
+	</bean>
+	
+	<bean id="overture3" class="acme.entities.overtures.Overture">
+		<property name="title" value="Overture #3"></property>
+		<property name="creationDate" value="2020/01/01 00:00"></property>
+		<property name="deadline" value="2020/08/01 00:00"></property>
+		<property name="paragraph" value="Any overture for the #1?"></property>
+		<property name="minimumMoney" value="20 €"></property>
+		<property name="maximumMoney" value="50 €"></property>
+		<property name="email" value="email@gmail.com"></property>
+	</bean>
+	
+	<!-- Inquires -->
+	
+	<bean id="inquire1" class="acme.entities.inquires.Inquire">
+		<property name="title" value="Gardener required."></property>
+		<property name="creationDate" value="2020/08/01 12:00"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="paragraph" value="Gardener is required for a whole week."></property>
+		<property name="minimumMoney" value="80 €"></property>
+		<property name="maximumMoney" value="120 €"></property>
+		<property name="email" value="job@gmail.com"></property>
+	</bean>
+	
+	<bean id="inquire2" class="acme.entities.inquires.Inquire">
+		<property name="title" value="Informatic project"></property>
+		<property name="creationDate" value="2020/08/05 12:00"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="paragraph" value="Informatic project is going to be started. We need proggramers."></property>
+		<property name="minimumMoney" value="200 €"></property>
+		<property name="maximumMoney" value="300 €"></property>
+		<property name="email" value="jobs@gmail.com"></property>
+	</bean>
+	
+	<bean id="inquire3" class="acme.entities.inquires.Inquire">
+		<property name="title" value="Security"></property>
+		<property name="creationDate" value="2020/01/01 12:00"></property>
+		<property name="deadline" value="2020/08/01 00:00"></property>
+		<property name="paragraph" value="We need people in order to increase the secutiry on our stablishment."></property>
+		<property name="minimumMoney" value="120 €"></property>
+		<property name="maximumMoney" value="150 €"></property>
+		<property name="email" value="job@gmail.com"></property>
+	</bean>
+	
+	<!-- Challenges -->
+	
+	<bean id="challenge1" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Get retweets"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="description" value="You'll get the reward if you get the number of retweets needed."></property>
+		<property name="rookieGoal" value="500 retweets"></property>
+		<property name="averageGoal" value="1000 retweets"></property>
+		<property name="expertGoal" value="5000 retweets"></property>
+		<property name="rookieReward" value="10 €"></property>
+		<property name="averageReward" value="25 €"></property>
+		<property name="expertReward" value="50 €"></property>
+	</bean>
+	
+	<bean id="challenge2" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Get dislikes on youtube"></property>
+		<property name="deadline" value="2021/01/01 00:00"></property>
+		<property name="description" value="You'll get the reward if you get the number of dislikes needed on youtube."></property>
+		<property name="rookieGoal" value="10000"></property>
+		<property name="averageGoal" value="25000"></property>
+		<property name="expertGoal" value="50000"></property>
+		<property name="rookieReward" value="10 €"></property>
+		<property name="averageReward" value="25 €"></property>
+		<property name="expertReward" value="50 €"></property>
+	</bean>
+	
+	<bean id="challenge3" class="acme.entities.challenges.Challenge">
+		<property name="title" value="Get new followers on twitter"></property>
+		<property name="deadline" value="2020/08/01 00:00"></property>
+		<property name="description" value="You'll get the reward if you get the number of new followers on twitter."></property>
+		<property name="rookieGoal" value="50"></property>
+		<property name="averageGoal" value="200"></property>
+		<property name="expertGoal" value="500"></property>
+		<property name="rookieReward" value="20 €"></property>
+		<property name="averageReward" value="50 €"></property>
+		<property name="expertReward" value="100 €"></property>
+	</bean>
+	
+</beans>

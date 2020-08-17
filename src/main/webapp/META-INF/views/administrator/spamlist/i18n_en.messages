@@ -1,0 +1,8 @@
+administrator.spamlist.list.label.spamwordslist = Spamwords list
+administrator.spamlist.list.label.threshold = Threshold
+
+administrator.spamlist.form.label.spamwordslist = Spamwords list
+administrator.spamlist.form.label.threshold = Threshold
+
+
+administrator.spamlist.form.button.return = Return

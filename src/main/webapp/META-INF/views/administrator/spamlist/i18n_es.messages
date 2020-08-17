@@ -1,0 +1,8 @@
+administrator.spamlist.list.label.spamwordslist = Lista de palabras spam
+administrator.spamlist.list.label.threshold = Umbral
+
+administrator.spamlist.form.label.spamwordslist = Lista de palabras spam
+administrator.spamlist.form.label.threshold = Umbral
+
+
+administrator.spamlist.form.button.return = Volver
