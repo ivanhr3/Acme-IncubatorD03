@@ -158,6 +158,17 @@
 		</property>
 	</bean>
 	
+	<bean id="notice4" class="acme.entities.notices.Notice">
+		<property name="headerPicture" value="https://www.pinterest.es/pin/826480969101400444/"></property>
+		<property name="title" value="Aviso test para relatedNotices Empty"></property>
+		<property name="creationDate" value="2020/07/01 12:00"></property>
+		<property name="deadline" value="2021/08/13 00:00"></property>
+		<property name="body" value="TESTING"></property>
+		<property name="relatedNotices">
+			<list>
+			</list>
+		</property>
+	</bean>
 	<!-- Technology records -->
 	
 	<bean id="technologyRecord1" class="acme.entities.technologyRecords.TechnologyRecord">
