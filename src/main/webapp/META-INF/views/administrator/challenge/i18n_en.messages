@@ -15,3 +15,6 @@ administrator.challenge.form.button.return = Return
 administrator.challenge.form.button.submit = Submit
 administrator.challenge.form.button.delete = Delete
 administrator.challenge.form.button.update = Update
+
+acme.validation.deadline = Must be at least 1 month in future.
+ame.validation.money = Must be greater than 0 and currency must be EUR.

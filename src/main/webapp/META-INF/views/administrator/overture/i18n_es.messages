@@ -14,3 +14,6 @@ administrator.overture.form.button.return = Volver
 administrator.overture.form.button.submit = Crear
 administrator.overture.form.button.delete = Borrar
 administrator.overture.form.button.update = Actualizar
+
+acme.validation.deadline = Debe ser al menos 1 mes en futuro.
+ame.validation.money = Debe ser mayor que cero y en moneda EUR.
