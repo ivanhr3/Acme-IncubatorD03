@@ -82,8 +82,8 @@ public class AdministratorInquireUpdateService implements AbstractUpdateService<
 		//Money validation
 		boolean money1 = entity.getMaximumMoney().getAmount() >= 0;
 		boolean money2 = entity.getMinimumMoney().getAmount() >= 0;
-		boolean currency2 = entity.getMaximumMoney().getCurrency().equals("€");
-		boolean currency1 = entity.getMinimumMoney().getCurrency().equals("€");
+		boolean currency2 = entity.getMaximumMoney().getCurrency().equals("€") || entity.getMaximumMoney().getCurrency().equals("EUR");
+		boolean currency1 = entity.getMinimumMoney().getCurrency().equals("€") || entity.getMinimumMoney().getCurrency().equals("EUR");
 		if (!errors.hasErrors("maximumMoney")) {
 			errors.state(request, money1, "maximumMoney", "acme.validation.money");
 		}

@@ -84,9 +84,9 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		boolean money1 = entity.getAverageReward().getAmount() >= 0;
 		boolean money2 = entity.getExpertReward().getAmount() >= 0;
 		boolean money3 = entity.getRookieReward().getAmount() >= 0;
-		boolean currency2 = entity.getAverageReward().getCurrency().equals("€");
-		boolean currency1 = entity.getExpertReward().getCurrency().equals("€");
-		boolean currency3 = entity.getRookieReward().getCurrency().equals("€");
+		boolean currency2 = entity.getAverageReward().getCurrency().equals("€") || entity.getAverageReward().getCurrency().equals("EUR");
+		boolean currency1 = entity.getExpertReward().getCurrency().equals("€") || entity.getExpertReward().getCurrency().equals("EUR");
+		boolean currency3 = entity.getRookieReward().getCurrency().equals("€") || entity.getRookieReward().getCurrency().equals("EUR");
 		if (!errors.hasErrors("expertReward")) {
 			errors.state(request, money1, "expertReward", "acme.validation.money");
 		}
