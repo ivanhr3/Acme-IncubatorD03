@@ -15,8 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
+<acme:form>
 	<acme:form-textbox code="administrator.sector.form.label.name" path="name"/>
-		
+	
+	<acme:form-submit test="${ command == 'show' }" code="administrator.sector.form.button.update" action="/administrator/sector/update"/>
+	<acme:form-submit test="${ command == 'update' }" code="administrator.sector.form.button.update" action="/administrator/sector/update"/>
 	<acme:form-return code="administrator.sector.form.button.return"/>
 </acme:form>
