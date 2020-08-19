@@ -1,0 +1,13 @@
+administrator.overture.form.label.title = Título
+administrator.overture.form.label.creationDate = Fecha de creación
+administrator.overture.form.label.deadline = Expira en
+administrator.overture.form.label.paragraph = Párrafo
+administrator.overture.form.label.minimumMoney = Dinero mínimo
+administrator.overture.form.label.maximumMoney = Dinero máximo
+administrator.overture.form.label.email = Email
+
+administrator.overture.list.label.title  Título
+administrator.overture.list.label.creationDate = Fecha de creación
+administrator.overture.list.label.deadline = Expira en
+
+administrator.overture.form.button.return = Volver
