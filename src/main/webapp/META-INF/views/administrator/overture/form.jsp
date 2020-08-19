@@ -18,7 +18,7 @@
 <acme:form>
 	<acme:form-textbox code="administrator.overture.form.label.title" path="title"/>
 	<jstl:if test="${ command != 'create' }">
-		<acme:form-moment code="administrator.overture.form.label.creationDate" path="creationDate"/>
+		<acme:form-moment readonly="true" code="administrator.overture.form.label.creationDate" path="creationDate"/>
 	</jstl:if>
 	<acme:form-moment code="administrator.overture.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="administrator.overture.form.label.paragraph" path="paragraph"/>

@@ -11,3 +11,6 @@ administrator.overture.list.label.creationDate = Fecha de creación
 administrator.overture.list.label.deadline = Expira en
 
 administrator.overture.form.button.return = Volver
+administrator.overture.form.button.submit = Crear
+administrator.overture.form.button.delete = Borrar
+administrator.overture.form.button.update = Actualizar

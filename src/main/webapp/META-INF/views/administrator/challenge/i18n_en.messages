@@ -12,3 +12,6 @@ administrator.challenge.list.label.title = Title
 administrator.challenge.list.label.deadline = Deadline
 
 administrator.challenge.form.button.return = Return
+administrator.challenge.form.button.submit = Submit
+administrator.challenge.form.button.delete = Delete
+administrator.challenge.form.button.update = Update

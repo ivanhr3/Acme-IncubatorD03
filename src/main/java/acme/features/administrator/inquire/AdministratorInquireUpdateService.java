@@ -80,14 +80,22 @@ public class AdministratorInquireUpdateService implements AbstractUpdateService<
 		}
 
 		//Money validation
-		boolean money = entity.getMinimumMoney().getAmount() < entity.getMaximumMoney().getAmount() && entity.getMaximumMoney().getAmount() >= 0 && entity.getMaximumMoney().getAmount() >= 0;
-		boolean currency = entity.getMinimumMoney().getCurrency() == "€" && entity.getMaximumMoney().getCurrency() == "€";
-		if (!errors.hasErrors("minimumMoney") && !errors.hasErrors("maximumMoney")) {
-			errors.state(request, money, "maximumMoney", "acme.validation.money");
+		boolean money1 = entity.getMaximumMoney().getAmount() >= 0;
+		boolean money2 = entity.getMinimumMoney().getAmount() >= 0;
+		boolean currency2 = entity.getMaximumMoney().getCurrency().equals("€");
+		boolean currency1 = entity.getMinimumMoney().getCurrency().equals("€");
+		if (!errors.hasErrors("maximumMoney")) {
+			errors.state(request, money1, "maximumMoney", "acme.validation.money");
+		}
+		if (!errors.hasErrors("minimumMoney")) {
+			errors.state(request, money2, "averageReward", "acme.validation.money");
 		}
 
-		if (!errors.hasErrors("minimumMoney") && !errors.hasErrors("maximumMoney")) {
-			errors.state(request, currency, "maximumMoney", "acme.validation.money");
+		if (!errors.hasErrors("maximumMoney")) {
+			errors.state(request, currency1, "maximumMoney", "acme.validation.money");
+		}
+		if (!errors.hasErrors("minimumMoney")) {
+			errors.state(request, currency2, "minimumMoney", "acme.validation.money");
 		}
 
 	}

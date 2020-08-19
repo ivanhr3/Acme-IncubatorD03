@@ -59,6 +59,16 @@ master.menu.administrator.notices.create = Crea un aviso
 master.menu.administrator.customization = Personalización
 master.menu.administrator.listsectors = Lista de sectores
 master.menu.administrator.listspamlist = Lista de palabras spam
+master.menu.administrator.inquires.list = Lista de peticiones
+master.menu.administrator.inquires.create = Crea una petición
+master.menu.administrator.overtures.list = Lista de propuestas
+master.menu.administrator.overtures.create = Crea una propuesta
+master.menu.administrator.technologyrecords.list = Lista de registros tecnológicos
+master.menu.administrator.technologyrecords.create = Crea un registro tecnológico
+master.menu.administrator.toolrecords.list = Lista de registros de herramientas
+master.menu.administrator.toolrecords.create = Crea un registro de herramientas
+master.menu.administrator.challenges.list = Lista de desafíos
+master.menu.administrator.challenges.create = Crea un desafío
 
 # master.menu.provider ########################################################
 

@@ -11,3 +11,6 @@ administrator.inquire.list.label.creationDate = Creation date
 administrator.inquire.list.label.deadline = Deadline
 
 administrator.inquire.form.button.return = Return
+administrator.inquire.form.button.submit = Submit
+administrator.inquire.form.button.delete = Delete
+administrator.inquire.form.button.update = Update

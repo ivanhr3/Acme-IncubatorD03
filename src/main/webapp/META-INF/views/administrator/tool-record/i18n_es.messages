@@ -13,3 +13,6 @@ administrator.toolrecord.form.label.stars = Estrellas
 
 
 administrator.toolrecord.form.button.return = Volver
+administrator.toolrecord.form.button.submit = Crear
+administrator.toolrecord.form.button.delete = Borrar
+administrator.toolrecord.form.button.update = Actualizar

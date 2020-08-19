@@ -13,3 +13,6 @@ administrator.technologyrecord.form.label.stars = Estrellas
 
 
 administrator.technologyrecord.form.button.return = Volver
+administrator.technologyrecord.form.button.submit = Crear
+administrator.technologyrecord.form.button.delete = Borrar
+administrator.technologyrecord.form.button.update = Actualizar

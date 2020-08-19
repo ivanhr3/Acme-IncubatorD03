@@ -19,7 +19,7 @@
 	<acme:form-url code="administrator.notice.form.label.headerPicture" path="headerPicture"/>
 	<acme:form-textbox code="administrator.notice.form.label.title" path="title"/>
 	<jstl:if test="${ command != 'create' }">
-		<acme:form-moment code="administrator.notice.form.label.creationDate" path="creationDate"/>
+		<acme:form-moment readonly="true" code="administrator.notice.form.label.creationDate" path="creationDate"/>
 	</jstl:if>
 	<acme:form-moment code="administrator.notice.form.label.deadline" path="deadline"/>
 	<acme:form-textbox code="administrator.notice.form.label.body" path="body"/>

@@ -13,3 +13,6 @@ administrator.technologyrecord.form.label.stars = Stars
 
 
 administrator.technologyrecord.form.button.return = Return
+administrator.technologyrecord.form.button.submit = Submit
+administrator.technologyrecord.form.button.delete = Delete
+administrator.technologyrecord.form.button.update = Update
